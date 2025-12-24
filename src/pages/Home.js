@@ -46,7 +46,7 @@ export default function Home() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post("https://skmlbackend.onrender.com/leads/sav", data,);
+      const response = await axios.post("https://skmlbackend.onrender.com/leads/save", data,);
       console.log(response.data);
       toast.success("saved")
       setData({
