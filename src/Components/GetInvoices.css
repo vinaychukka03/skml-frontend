@@ -1,0 +1,38 @@
+.table-wrapper {
+  width: 95%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 600px) {
+  table {
+    min-width: 800px; 
+  }
+}
+.btn-view,
+.btn-download {
+
+  font-size: 13px;
+  padding: 5px 0px;
+  text-align: center;
+}
+
+.btn-view {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.btn-download {
+  background-color: #198754;
+  color: white;
+  
+}
+
+.btn-view:hover,
+.btn-download:hover {
+  opacity: 0.85;
+}
