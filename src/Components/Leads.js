@@ -31,6 +31,7 @@ function Leads() {
     } catch (error) {
       if (error.response?.status === 401) {
         toast.error("Session expired. Please login again");
+        localStorage.removeItem("token")
         navigate("/admin");
       }
       toast.error("Fails to Get Leads")

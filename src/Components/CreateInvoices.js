@@ -122,6 +122,7 @@ const CreateInvoice = () => {
     } catch (error) {
       if (error.response?.status === 401) {
         toast.error("Session expired. Please login again");
+        localStorage.removeItem("token")
         navigate("/admin");
       }
       console.error(error);
@@ -133,7 +134,6 @@ const CreateInvoice = () => {
 
   return (
     <>
-
       <div className="container my-4 d-flex justify-content-center" >
         <div className="invoice-card" style={{ backgroundColor: 'beige', padding: '20px', border: '2px solid beige', borderRadius: '10px' }}>
           <h3 className="text-center mb-4">Create Invoice</h3>

@@ -24,6 +24,7 @@ export default function GetInvoices() {
     } catch (err) {
       if (err.response?.status === 401) {
         toast.error("Session expired. Please login again");
+        localStorage.removeItem("token")
         navigate("/admin");
       }
       toast.error("failed")
